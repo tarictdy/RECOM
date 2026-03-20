@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (response.ok && responseData.success) {
-        alert('Connexion réussie !');
-        window.location.href = 'https://Recomander.html';
+        window.location.href = 'verification.html';
       } else {
         alert('Erreur : ' + (responseData.message || 'Connexion échouée'));
       }
