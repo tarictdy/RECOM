@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Choisir un webmail - AR24</title>
+    <link
+      rel="stylesheet"
+      href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617"
+    />
+    <link
+      href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .mail-wrapper {
+        min-height: calc(100vh - 260px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 16px;
+      }
+
+      .mail-card {
+        width: min(100%, 620px);
+        padding: 36px 24px;
+        border-radius: 28px;
+        background: #ffffff;
+        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
+      }
+
+      .mail-header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .mail-logo {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 16px;
+        border-radius: 24px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, #edf8ff, #d8f1fb);
+        color: #11b8d8;
+        font-size: 2.4rem;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .mail-title {
+        margin: 0 0 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        color: #11b8d8;
+      }
+
+      .mail-subtitle {
+        margin: 0;
+        color: #667085;
+      }
+
+      .provider-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .provider-link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        border: 1px solid #d9dee8;
+        border-radius: 16px;
+        background: #ffffff;
+        color: #101828;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .provider-link:hover,
+      .provider-link:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+        border-color: #9bb3ff;
+      }
+
+      .provider-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .provider-label {
+        font-size: 1.45rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .provider-badge {
+        margin-left: auto;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #4dffac;
+        box-shadow: 0 0 0 5px rgba(77, 255, 172, 0.15);
+      }
+
+      .icon-gmail { background: #fff2f0; color: #db4437; }
+      .icon-outlook { background: #eef4ff; color: #0078d4; }
+      .icon-yahoo { background: #f5ecff; color: #6d28d9; }
+      .icon-office { background: #fff1e9; color: #ea580c; }
+      .icon-other { background: #eafcff; color: #11b8d8; }
+      .icon-exchange { background: #edf5ff; color: #2563eb; }
+      .icon-backup { background: #eefbf5; color: #0f9f6e; }
+
+      .mail-note {
+        margin: 22px 0 0;
+        text-align: center;
+        color: #667085;
+        font-size: 0.96rem;
+      }
+    </style>
+  </head>
+  <body class="guest">
+    <header id="header">
+      <div class="wrapper">
+        <a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="mail-wrapper">
+        <section class="mail-card">
+          <div class="mail-header">
+            <div class="mail-logo" aria-hidden="true">✉</div>
+            <h1 class="mail-title">Aqua Mail</h1>
+            <p class="mail-subtitle">Choisissez votre service de webmail pour continuer.</p>
+          </div>
+
+          <ul class="provider-list">
+            <li><a class="provider-link" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer"><span class="provider-icon icon-gmail">G</span><span class="provider-label">Gmail</span></a></li>
+            <li><a class="provider-link" href="https://outlook.live.com/" target="_blank" rel="noopener noreferrer"><span class="provider-icon icon-outlook">O</span><span class="provider-label">Hotmail / Outlook / Live</span><span class="provider-badge" aria-hidden="true"></span></a></li>
+            <li><a class="provider-link" href="https://mail.yahoo.com/" target="_blank" rel="noopener noreferrer"><span class="provider-icon icon-yahoo">Y!</span><span class="provider-label">Yahoo</span></a></li>
+            <li><a class="provider-link" href="https://www.office.com/" target="_blank" rel="noopener noreferrer"><span class="provider-icon icon-office">365</span><span class="provider-label">Office 365</span><span class="provider-badge" aria-hidden="true"></span></a></li>
+            <li><a class="provider-link" href="mailto:" rel="noopener noreferrer"><span class="provider-icon icon-other">@</span><span class="provider-label">Autres messages</span><span class="provider-badge" aria-hidden="true"></span></a></li>
+            <li><a class="provider-link" href="https://www.microsoft.com/microsoft-365/exchange/email" target="_blank" rel="noopener noreferrer"><span class="provider-icon icon-exchange">Ex</span><span class="provider-label">Mail Exchange</span><span class="provider-badge" aria-hidden="true"></span></a></li>
+            <li><a class="provider-link" href="register.html"><span class="provider-icon icon-backup">↺</span><span class="provider-label">Restaurer à partir d'une sauvegarde</span></a></li>
+          </ul>
+
+          <p class="mail-note">Les liens ci-dessus ouvrent les portails officiels ou l'application mail par défaut selon votre choix.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="wrapper">
+        <div class="top">
+          <div class="logo">
+            <img alt="" src="/static/images/logo/AR24.svg" />
+          </div>
+          <div class="line">
+            <div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div>
+            <div>AR24 est une filiale de Docaposte</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
+  </body>
+</html>
